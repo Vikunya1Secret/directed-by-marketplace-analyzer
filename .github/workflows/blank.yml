@@ -1,0 +1,17 @@
+# Пустой workflow для будущих CI/CD задач
+name: Blank workflow
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Echo message
+        run: echo "CI/CD будет настроен позже"
